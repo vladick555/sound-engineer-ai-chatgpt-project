@@ -1,0 +1,24 @@
+{
+  "artist_or_engineer_name": "Example User",
+  "main_daw": "Logic Pro",
+  "secondary_daws": ["Ableton Live", "FL Studio"],
+  "plugins": [
+    "FabFilter Pro-Q 3",
+    "FabFilter Pro-C 2",
+    "Waves Tune Real-Time",
+    "iZotope Ozone 12",
+    "iZotope RX 10",
+    "Valhalla VintageVerb"
+  ],
+  "monitoring": {
+    "headphones": "Sony MDR-7506",
+    "monitors": "Adam Audio",
+    "room_treatment": "untreated"
+  },
+  "goals": [
+    "clean vocal mix",
+    "modern trap sound",
+    "loud but clean master",
+    "plugin-aware recommendations"
+  ]
+}
