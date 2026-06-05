@@ -1,53 +1,155 @@
-# Sound Engineer AI — ChatGPT Project Pack
+# Sound Engineer AI
 
-**Sound Engineer AI** — готовый набор инструкций и источников для ChatGPT Project. Он превращает обычный чат в практического ассистента по сведению, мастерингу, DAW, плагинам и анализу скриншотов.
+Sound Engineer AI is an open-source AI assistant for music producers, artists, and beginner sound engineers.
 
-Проект сделан не как отдельное приложение и не как Python-код. Пользователю достаточно создать Project в ChatGPT, вставить главный instruction-файл и загрузить файлы из папки `chatgpt_sources` в Sources.
+The goal of the project is to build a standalone web service powered by the OpenAI API. The assistant helps users understand mixing, mastering, vocal chains, DAW workflows, plugin settings, screenshots, and audio feedback.
 
-## Что умеет
+This project started as a ChatGPT Project Pack and is now being developed into a full API-based open-source service.
 
-- Помогает настраивать плагины по скриншотам: EQ, compressor, limiter, clipper, autotune, reverb, delay, saturation, stereo tools.
-- Даёт цепочки обработки под вокал, биты, 808, мастер, send effects и vocal bus.
-- Учитывает DAW пользователя: Logic Pro, Ableton Live, FL Studio.
-- Учитывает список плагинов пользователя, чтобы не советовать то, чего у него нет.
-- Помогает разбирать WAV/AIFF/MP3, если пользователь загрузил аудио в ChatGPT.
-- Объясняет настройки человеческим языком: что крутить, почему, какие ошибки избегать.
-- Использует список официальных источников, но не распространяет чужие мануалы.
+## Vision
 
-## Как использовать
+Independent artists often cannot afford professional mix feedback, mastering engineers, or personal audio engineering education.
 
-1. Создай новый Project в ChatGPT.
-2. Открой файл:
-   `chatgpt_sources/00_PROJECT_INSTRUCTIONS_PASTE_IN_CHATGPT.md`
-3. Скопируй его содержимое в поле **Project Instructions / Инструкции проекта**.
-4. Загрузи остальные файлы из папки `chatgpt_sources` в **Sources / Источники**.
-5. Перед использованием отредактируй `02_USER_PLUGIN_PROFILE_TEMPLATE.md` под свои плагины и загрузи эту версию в Sources.
-6. Напиши первое сообщение из файла `13_USER_ONBOARDING_FIRST_MESSAGE.md`.
+Sound Engineer AI aims to make practical audio engineering help more accessible by combining:
 
-Подробная инструкция лежит здесь:
+* OpenAI API workflows
+* DAW-specific knowledge
+* Plugin-specific guidance
+* Screenshot analysis
+* Audio feedback workflows
+* Mix and master checklists
+* User plugin profiles
+* Educational explanations for beginners
 
-- `docs/HOW_TO_INSTALL_IN_CHATGPT_PROJECT_RU.md`
-- `docs/WHAT_TO_UPLOAD_TO_SOURCES_RU.md`
-- `docs/HOW_TO_UPLOAD_TO_GITHUB_RU.md`
+## Planned Features
 
-## Важно
+### AI Chat Assistant
 
-Этот репозиторий **не содержит копии чужих мануалов** Logic Pro, Ableton Live, FL Studio, Waves, FabFilter, iZotope и других компаний. Вместо этого проект содержит индекс официальных ссылок и собственные практические правила работы.
+A web-based assistant for music production and sound engineering questions.
 
-## Кому подходит
+Planned support:
 
-- артистам
-- битмейкерам
-- продюсерам
-- начинающим звукорежиссёрам
-- людям, которые хотят понимать свои плагины, а не просто крутить пресеты
+* Logic Pro
+* Ableton Live
+* FL Studio
+* FabFilter plugins
+* Waves plugins
+* iZotope RX
+* iZotope Ozone
+* Vocal tuning workflows
+* Mixing and mastering chains
 
-## Рекомендуемое название Project в ChatGPT
+### User Plugin Profile
 
-```text
-Sound Engineer AI
+Users will be able to define which plugins they own.
+
+The assistant will then give advice based only on the user's available plugins.
+
+Example:
+
+```json
+{
+  "daw": "Logic Pro",
+  "plugins": ["FabFilter Pro-Q 3", "Waves Tune Real-Time", "Ozone 12", "RX 10"]
+}
 ```
 
-## Лицензия
+### Screenshot Analysis
 
-MIT License. См. файл `LICENSE`.
+Users will be able to upload screenshots from their DAW or plugin chains.
+
+The assistant will explain:
+
+* what each setting does
+* what may be wrong
+* what should be changed
+* how to improve the chain
+
+### Audio Feedback
+
+The project will include workflows for uploading audio files and receiving structured feedback.
+
+Planned analysis areas:
+
+* vocal clarity
+* low-end balance
+* harsh frequencies
+* muddiness
+* stereo width
+* loudness
+* master readiness
+
+## Repository Structure
+
+```text
+apps/
+  web/
+    Frontend web application
+
+  api/
+    Backend API service
+
+packages/
+  prompts/
+    Prompt workflows for mixing, mastering, plugins, DAWs, and screenshots
+
+  audio-analysis/
+    Audio analysis helpers and experiments
+
+docs/
+  Architecture, setup guides, roadmap, and contribution docs
+
+examples/
+  Example plugin profiles, prompts, and user workflows
+```
+
+## Roadmap
+
+### v0.1.0
+
+* Prepare project architecture
+* Add documentation
+* Add first prompt workflows
+* Add example plugin profile
+* Define API service plan
+
+### v0.2.0
+
+* Build basic web interface
+* Add OpenAI API chat integration
+* Add environment variable setup
+* Add first user profile format
+
+### v0.3.0
+
+* Add screenshot analysis workflow
+* Add DAW-specific response modes
+* Add Logic Pro, Ableton Live, and FL Studio sections
+
+### v0.4.0
+
+* Add audio upload workflow
+* Add structured mix feedback
+* Add basic loudness and frequency feedback helpers
+
+### v0.5.0
+
+* Add plugin-aware recommendations
+* Add user preset system
+* Add saved project sessions
+
+## Why Open Source
+
+The project is open source because music production knowledge should be easier to access.
+
+Many beginner artists struggle with unclear tutorials, random plugin chains, bad presets, and expensive feedback. This project aims to create a practical AI tool that helps users learn faster and make better creative decisions.
+
+## Status
+
+Early-stage project.
+
+The repository is currently being prepared for active development, issue tracking, public roadmap, and API-based implementation.
+
+## License
+
+MIT License
