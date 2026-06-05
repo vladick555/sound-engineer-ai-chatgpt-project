@@ -1,0 +1,15 @@
+chatgpt
+chatgpt-project
+sound-engineering
+mixing
+mastering
+audio-production
+music-production
+logic-pro
+ableton-live
+fl-studio
+plugins
+vocal-chain
+mastering-chain
+music-ai
+producer-tools
